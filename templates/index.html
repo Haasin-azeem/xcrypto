@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block title %}
+ Home
+{% endblock %}
+
+{% block main %}
+    <h1>Hello, {{username}}</h1>
+
+    <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Tag</th>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>BTC</td>
+            <td>Bitcoin</td>
+            <td>{{btc}}</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>ETH</td>
+            <td>Ethereum</td>
+            <td>{{eth}}</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>DOGE</td>
+            <td>DogeCoin</td>
+            <td>{{doge}}</td>
+          </tr>
+            <th scope="row">4</th>
+            <td>USTD</td>
+            <td>Tether</td>
+            <td>{{ustd}}</td>
+          </tr>
+            <th scope="row">5</th>
+            <td>LTC</td>
+            <td>LiteCoin</td>
+            <td>{{ltc}}</td>
+          </tr>
+        </tbody>
+      </table>
+{% endblock %}

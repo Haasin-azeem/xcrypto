@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+sell
+{% endblock %} 
+
+{% block main %} 
+
+<div class="login-box">
+ 
+    <form action="/sell" method="post">
+      <div class="user-box">
+        <input required="" name="name" type="text">
+        <label>Tag</label>
+      </div>
+      <div class="user-box">
+        <input required="" name="amount" type="number">
+        <label>Amount</label>
+      </div><center>
+      <button type="submit">
+             sell
+         <span></span>
+      </button></center>
+    </form>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}
+transactions
+{% endblock %} 
+
+{% block main %} 
+    <div>
+        <h1>Balance:</h1>
+        <h2>${{cash}}</h2>
+    </div>
+    <div>
+    <h2>Transactions:</h2>
+    <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">symbol</th>
+            <th scope="col">amount</th>
+            <th scope="col">price</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for row in actions %}
+          <tr>
+            <td>{{row["symbol"]}}</td>
+            <td>{{row["shares"]}}</td>
+            <td>{{row["price"]}}</td>
+          </tr>
+        </tbody>
+        {% endfor %}
+      </table>
+
+    </div>
+
+{% endblock %}

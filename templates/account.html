@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block title %}
+wallet
+{% endblock %} 
+
+{% block main %} 
+    <div>
+        <h1>Balance:</h1>
+        <h2>${{cash}}</h2>
+    </div>
+    <div>
+    <h2>Wallet:</h2>
+    <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Symbol</th>
+            <th scope="col">amount</th>
+            <th scope="col">Price</th>
+            
+    
+          </tr>
+        </thead>
+    
+        <tbody>
+          {% for stock in stocks%}
+          <tr>
+            <td>{{ stock["symbol"] }}</td>
+            <td>{{ stock["totalshares"] }}</td>
+            <td>{{ stock["price"] }}</td>
+    
+    
+          </tr>
+          {% endfor %}
+    
+        </tbody>
+    </div>
+
+{% endblock %}
